@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script|Raleway:400,700');
+
+a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:'';content:none}table{border-collapse:collapse;border-spacing:0}
+
+body{
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+    color: #98aaa9;
+    background-color: #f4f4f4;
+}
+
+h1, h2, h3{
+    font-family: 'Dancing Script', cursive;
+    color: #98aaa9;
+}
+
+h1{
+    font-size: 40px;
+    padding: 20px;
+    float: left;
+    color: #fff;
+}
+
+h2{
+    font-size: 55px;
+    text-align: center;
+    padding: 50px;
+}
+h3{
+    font-size: 45px;
+}
+
+.top-bar, footer{
+    background-color: #9ddeca;
+    height: 90px;
+}
+
+a{
+    text-decoration: none;
+    color: #98aaa9;
+}
+
+a:hover{
+    color: #9ddeca;
+}
+
+footer a:hover{
+    color: #fff;
+}
+
+nav a:hover{
+    color: #fff;
+}
+
+header img{
+    width: 100%;
+}
+
+nav{
+    position: relative;
+    z-index: 9999;
+}
+
+nav ul{
+    
+}
+
+nav li{
+    display: block;
+    float: right;
+    padding: 20px;
+    margin-top: 15px;
+}
+
+footer p:first-child{
+    float: left;
+    padding: 30px;
+}
+
+footer p:last-child{
+    float: right;
+    padding: 30px;
+}
+
+
+main{
+    width: 70%;
+    margin: 0 auto;
+}
+
+.flex-caption {
+    color: #ffffff;
+    display: block;
+    position: absolute;
+    bottom: 50%;
+    text-align: center;
+    width: 100%;
+    font-size: 6vw;
+    font-family: 'Dancing Script', cursive;
+}
+.flex-caption a{
+    color: #fff;
+}
+
+.flex-caption a:hover{
+    color: #9ddeca;
+}
+
+
+.recipe-filter{
+    text-align: center;
+    padding: 50px;
+    font-weight: 400;
+}
+
+.recipe-filter img{
+    margin: 0 auto;
+}
+
+.recipe-filter a{
+    margin: 50px;
+}
+
+.recipe-grid{
+    padding-bottom: 90px;
+}
+
+
+#tabs a{
+    background-color: #9ddeca;
+}
+
+#tabs ul{
+    background-color: #fff;
+    padding: 10px;
+}
+
+#tabs{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    margin: 50px;
+    padding: 30px;
+}
+
+#about, #why, #source{
+    text-align: center;
+    padding: 30px;
+}
+
+#tabs p{
+    padding-top: 30px;
+    line-height: 2.5;
+}
+
+#pretty-photo{
+    margin-bottom: 80px;
+}
+
+div.ppt, .pp_description {
+display: none !important;
+}

@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>HSBC GLOBE - WebGL Prototype</title>
+    
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAGbF4QERrE6sPj8wSWAvtdo6oEls0K0_w"></script>
+         
+        
+        <!--    Three JS main library    -->
+        <script src="js/three.js-master/build/three.min.js"></script>
+        
+        <!--    WebGL support detector    -->
+        <script src="js/three.js-master/examples/js/Detector.js"></script>
+        
+        <!--    THREE js Orbit Controls    -->
+        <script src="js/three.js-master/examples/js/controls/OrbitControls.js"></script>
+        
+ 
+        <!--[if lt IE 9]>
+	       <script src="js/html5shiv.min.js"></script>
+        <![endif]-->
+
+          <!--    Our WebGL example    -->
+        <script src="js/earth.js"></script>
+   
+    <link rel="stylesheet" href="css/style.css" />
+    
+   
+    </head>
+    <body>
+      <div id="loading">
+          <p>This page uses a WebGl 3D Globe to display locations of HSBC banks around the world. 
+          <br>The page sources the information using a PHP page scraper from <a href="https://www.hsbc.com/about-hsbc/contact-us/country-contacts" target="_blank"> HCBC.com </a>outputs it using Javascript and a jQuery accordion, along with on a WebGl globe.
+          <br>
+          <br> The page is loading, thank you for your patience...</p>
+          <div class="loader"></div>
+      </div>
+       <header>
+           <nav>
+               <ul>
+                   <li><img src="images/HSBC-Logo.png"></li>
+                   <li>About HSBC</li>
+                   <li>Our Approach</li>
+                   <li>Investor Relations</li>
+                   <li>News And Insights</li>
+                   <li>Careers</li>
+               </ul>
+           </nav>
+       </header>
+       <main>
+        <p id="no-js">This WebGL globe is an interactive destination picker. It appears that your browser does not support WebGL, try out the latest version of chrome to view the content, or click here to return to the main page.</p>
+        
+        <section id="destination-menu">
+         <h1> HSBC Locations Around The World </h1>
+            <div id="accordion">
+             
+              <h3>HSBC Around The World </h3>
+                      <div>
+                        <p>
+                        Welcome to this WebGL prototype. This application sources information from <a href="https://www.hsbc.com/about-hsbc/contact-us/country-contacts" target="_blank"> HCBC.com </a> using a PHP page scraper and outputs the information using Javascript and a jQuery accordion, along with on a WebGl globe.
+                        </p>
+                        <p>Click a country on the map to open the corresponding tab.</p>
+                        </div>
+
+            </div>
+        </section> 
+
+        <div id="canada-box">
+                       <p>
+                        This is another example of how content can be displayed.
+                        </p>    
+            </div>
+        
+        <img class="arrows" src="images/arrow.png">
+        </main>
+        
+    </body>
+</html>

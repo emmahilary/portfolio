@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+    <head>
+       <meta charset="utf-8"/>
+        <title>Recipes - Inspired Recipes </title>
+        <link rel="stylesheet" href="css/style.css" />
+        <!--[if lt IE 9]>
+	<script src="js/html5shiv.min.js"></script>
+    <![endif]-->
+    <!--jQUERY 1.12.4-->
+<script
+  src="https://code.jquery.com/jquery-1.12.4.min.js"
+  integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+  crossorigin="anonymous"></script>
+   
+   <!-- ISOTOPE - CSS & JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.5/isotope.pkgd.js"></script>
+   
+   <!-- jQUERY UI - CSS & JS -->
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    
+    <style>
+  .isotope-item {z-index: 2;}
+  .isotope-hidden.isotope-item {pointer-events: none;  z-index: 1;}
+  .isotope, .isotope .isotope-item { /* change duration value to whatever you like */-webkit-transition-duration: 0.8s; -moz-transition-duration: 0.8s; transition-duration: 0.8s;}
+  .isotope {-webkit-transition-property: height, width; -moz-transition-property: height, width; transition-property: height, width;}
+  .isotope .isotope-item {-webkit-transition-property: -webkit-transform, opacity; -moz-transition-property: -moz-transform, opacity; transition-property: transform, opacity;}
+</style>
+   
+   <!--ISOTOPE HOOKUP-->
+<script>
+  //PORTFIOLIO CONTAINER
+  $(window).load(function() {
+    var $container = $('.recipe-grid'); //THIS IS THE NAME OF THE CLASS FOR THE CONTAINER THAT WILL HOLD THE PORTFOLIO IMAGES
+    $container.isotope({
+      filter: '*',
+      animationOptions: {
+        duration: 750, //TIMING IN MS
+        easing: 'linear', //EASING
+        queue: false
+      }
+    });
+    
+    //PORTFOLIO FILTER
+    $('.recipe-filter a').click(function() {
+      
+      //CURRENT CLASS
+      $('.recipe-filter .current').removeClass('current');
+      $(this).addClass('current');
+      
+      //DATA-FILTER
+      var selector = $(this).attr('data-filter');
+      $container.isotope({
+        filter: selector,
+        animationOptions: {
+          duration: 750, //TIMING IN MS
+          easing: 'linear', //EASING
+          queue: false
+        }
+      });
+      return false;
+    });
+  });
+</script>
+   
+   <!--TOOLTIP - HOOKUP-->
+
+<script>
+  $( function() {
+    $( document ).tooltip({
+      track: true
+    });
+  } );
+  </script>
+    
+    </head>
+    <body>
+        <header>
+           <div class="top-bar"><h1>Inspired Recipes</h1>
+            <nav>
+                <ul>
+                    <li><a href="recipes.html">Recipes</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="index.html">Home</a></li>
+                </ul>
+            </nav>
+            </div>
+            <img src="images/recipe-page-header.jpg" alt="find a recipe">
+        </header>
+        <main id="container">
+            <h2>Recipes</h2>
+            <div class="recipe-filter">
+                <a href="#" class="current" data-filter="*">All Recipes</a>
+              <a href="#" data-filter=".breakfast">Breakfast</a>
+              <a href="#" data-filter=".lunch">Lunch</a>
+              <a href="#" data-filter=".dinner">Dinner</a>
+              <a href="#" data-filter=".snack">Snacks</a>
+              <a href="#" data-filter=".healthy">Healthy</a>
+            </div>
+
+        <div class="recipe-grid" title="These recipe images are for display purposes only!">
+            <div class="breakfast snack lunch healthy"><img src="images/grid/1grid-item.jpg" alt="#"></div>
+            <div class="breakfast lunch"><img src="images/grid/2grid-item.jpg" alt="grid-image"></div>
+            <div class="breakfast lunch"><img src="images/grid/3grid-item.jpg" alt="grid-image"></div>
+            <div class="breakfast healthy"><img src="images/grid/4grid-item.jpg" alt="grid-image"></div>
+            <div class="breakfast healthy"><img src="images/grid/5grid-item.jpg" alt="grid-image"></div>
+            <div class="breakfast"><img src="images/grid/6grid-item.jpg" alt="grid-image"></div>
+            <div class="breakfast"><img src="images/grid/7grid-item.jpg" alt="grid-image"></div>
+            <div class="breakfast lunch"><img src="images/grid/8grid-item.jpg" alt="grid-image"></div>
+            <div class="breakfast"><img src="images/grid/9grid-item.jpg" alt="grid-image"></div>
+            <div class="breakfast"><img src="images/grid/10grid-item.jpg" alt="grid-image"></div>
+            <div class="breakfast snack healthy"><img src="images/grid/11grid-item.jpg" alt="grid-image"></div>
+            <div class="breakfast snack healthy"><img src="images/grid/12grid-item.jpg" alt="grid-image"></div>
+            <div class="lunch dinner"><img src="images/grid/13grid-item.jpg" alt="grid-image"></div>
+            <div class="lunch dinner"><img src="images/grid/14grid-item.jpg" alt="grid-image"></div>
+            <div class="lunch"><img src="images/grid/15grid-item.jpg" alt="grid-image"></div>
+            <div class="breakfast lunch snack healthy"><img src="images/grid/16grid-item.jpg" alt="grid-image"></div>
+            <div class="breakfast lunch snack healthy"><img src="images/grid/17grid-item.jpg" alt="grid-image"></div>
+            <div class="dinner lunch"><img src="images/grid/18grid-item.jpg" alt="grid-image"></div>
+            <div class="breakfast lunch snack healthy"><img src="images/grid/19grid-item.jpg" alt="grid-image"></div>
+            <div class="lunch snack dinner"><img src="images/grid/20grid-item.jpg" alt="grid-image"></div>
+            <div class="breakfast snack"><img src="images/grid/21grid-item.jpg" alt="grid-image"></div>
+            <div class="dinner lunch"><img src="images/grid/22grid-item.jpg" alt="grid-image"></div>
+            <div class="lunch dinner healthy"><img src="images/grid/23grid-item.jpg" alt="grid-image"></div>
+            <div class="lunch healthy"><img src="images/grid/24grid-item.jpg" alt="grid-image"></div>                
+            </div>
+        </main>
+    <footer id="footer">
+        <p class="fl">A Sample Site By Emma McKay</p>
+        <p class="fr">Photography Courtesy of <a href="https://www.pexels.com/">Pexels</a></p>
+    </footer>     
+    </body>
+</html>

@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+    <head>
+       <meta charset="utf-8"/>
+       <meta name="viewport" content="width=device-width,initial-scale=1"/>
+        <title>Jenna Smith PR</title>
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
+    <!--jQUERY 1.12.4-->
+<script
+  src="https://code.jquery.com/jquery-1.12.4.min.js"
+  integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+  crossorigin="anonymous"></script>
+   
+   <!-- ISOTOPE - CSS & JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.5/isotope.pkgd.js"></script>
+   
+   <!-- jQUERY UI - CSS & JS -->
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    
+    <style>
+  .isotope-item {z-index: 2;}
+  .isotope-hidden.isotope-item {pointer-events: none;  z-index: 1;}
+  .isotope, .isotope .isotope-item { /* change duration value to whatever you like */-webkit-transition-duration: 0.8s; -moz-transition-duration: 0.8s; transition-duration: 0.8s;}
+  .isotope {-webkit-transition-property: height, width; -moz-transition-property: height, width; transition-property: height, width;}
+  .isotope .isotope-item {-webkit-transition-property: -webkit-transform, opacity; -moz-transition-property: -moz-transform, opacity; transition-property: transform, opacity;}
+</style>
+   
+   <!--ISOTOPE HOOKUP-->
+<script>
+  //PORTFIOLIO CONTAINER
+  $(window).load(function() {
+    var $container = $('.photo-grid'); //THIS IS THE NAME OF THE CLASS FOR THE CONTAINER THAT WILL HOLD THE PORTFOLIO IMAGES
+    $container.isotope({
+      filter: '*',
+      animationOptions: {
+        duration: 750, //TIMING IN MS
+        easing: 'linear', //EASING
+        queue: false
+      }
+    });
+    
+    //PORTFOLIO FILTER
+    $('.photo-filter a').click(function() {
+      
+      //CURRENT CLASS
+      $('.photo-filter .current').removeClass('current');
+      $(this).addClass('current');
+      
+      //DATA-FILTER
+      var selector = $(this).attr('data-filter');
+      $container.isotope({
+        filter: selector,
+        animationOptions: {
+          duration: 750, //TIMING IN MS
+          easing: 'linear', //EASING
+          queue: false
+        }
+      });
+      return false;
+    });
+  });
+</script>
+   
+   <!--TOOLTIP - HOOKUP-->
+
+<script>
+  $( function() {
+    $( document ).tooltip({
+      track: true
+    });
+  } );
+  </script>
+        </head>
+    <body id="news">
+<header>
+       <div id="top-bar">
+            <h5 id="small-logo"><a href="index.html">jenna smith</a></h5>
+               
+              <nav id="main-nav">
+               <ul>
+                   <li><a href="index.html">Home</a></li>
+                   <li><a href="about.html">About</a></li>
+                   <li><a href="services.html">Services</a></li>
+                   <li><a href="contact.html">Contact</a></li>
+                   <li><a href="news.html">Media</a></li>
+               </ul>
+           </nav>
+            </div>
+            <img src="images/stock-9.jpg" alt="stock">
+    </header>
+     <main id="container">
+ <h3 class="clear"> In The News</h3>
+         <div class="photo-filter">
+                <a href="#" class="current" data-filter="*">All</a>
+              <a href="#" data-filter=".clients">Articles</a>
+              <a href="#" data-filter=".events">Events</a>
+            </div>
+         <div class="photo-grid" title="These images are for display purposes only! Find them at Pexels.com">
+            <div class="clients"><img src="images/stock-1.jpg" alt="#"></div>
+            <div class="clients"><img src="images/stock-2.jpg" alt="grid-image"></div>
+            <div class="events clients"><img src="images/stock-3.jpg" alt="grid-image"></div>
+            <div class="events clients"><img src="images/stock-4.jpg" alt="grid-image"></div>
+            <div class="events"><img src="images/stock-8.jpg" alt="grid-image"></div>
+            <div class="events"><img src="images/stock-21.jpg" alt="grid-image"></div>
+            <div class="events"><img src="images/stock-22.jpg" alt="grid-image"></div>
+             <div class="events"><img src="images/stock-23.jpg" alt="grid-image"></div>
+             <div class="clients"><img src="images/stock-24.jpg" alt="grid-image"></div>
+             <div class="events"><img src="images/stock-25.jpg" alt="grid-image"></div>
+             <div class="events"><img src="images/stock-26.jpg" alt="grid-image"></div>
+             <div class="events"><img src="images/stock-27.jpg" alt="grid-image"></div>
+             <div class="clients"><img src="images/stock-28.jpg" alt="grid-image"></div>
+             <div class="events"><img src="images/stock-29.jpg" alt="grid-image"></div>
+             <div class="events"><img src="images/stock-210.jpg" alt="grid-image"></div>
+             <div class="events"><img src="images/stock-211.jpg" alt="grid-image"></div>
+             <div class="clients"><img src="images/stock-212.jpg" alt="grid-image"></div>
+             <div class="events"><img src="images/stock-213.jpg" alt="grid-image"></div>
+             <div class="events"><img src="images/stock-214.jpg" alt="grid-image"></div>
+         
+         </div>
+     </main>       
+
+   <footer>
+        <p>647-888-9999 <br> jenna@jennasmith.com <br>Burlington, ON </p>
+            <p><span>A Sample Site By <a href="http://emmahilary.com/" target="_blank"> Emma Hilary</a></span>
+            </p>
+        <div class="socials">
+           <a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter-square"></i></a>
+           <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+           <a href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        </div>
+    </footer>           
+    </body>
+</html>
